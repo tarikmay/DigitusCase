@@ -211,6 +211,10 @@ Bu API ucu aşağıdaki parametler ile gg.mm.yyyy tarihinde atılan tüm istekle
 **Auth:** JWTBearer
 
 
+## NOT
+**-** Bu projede cache,attribute,claim,middleware örnekleri bulunmaktadır.
 
-**Not:** Proje örneğine harcanan süre 3 gündür.
+**-** Proje için db uzak sunucu bilgileri ve smtp ayarları üzerindedir.
+
+**-** Bu proje için geçen süre 3 gündür.
 
