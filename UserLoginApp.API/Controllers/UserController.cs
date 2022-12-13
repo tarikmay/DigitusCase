@@ -22,12 +22,12 @@ namespace UserLoginApp.API.Controllers
         private readonly IMemoryCache _memoryCache;
         private readonly IRequestTimeService _requestTimeService;
 
-        public UserController(IRequestTimeService requestTimeService,IMemoryCache memoryCache,IUserService userService,IMapper mapper)
+        public UserController(IRequestTimeService requestTimeService, IMemoryCache memoryCache, IUserService userService, IMapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
             _memoryCache = memoryCache;
-            _requestTimeService=requestTimeService;
+            _requestTimeService = requestTimeService;
         }
 
         [HttpGet("Users")]
@@ -39,7 +39,7 @@ namespace UserLoginApp.API.Controllers
         [HttpGet("{id}")]
         public User GetUserById(string id)
         {
-            return _userService.Get(x=>x.Id==id);
+            return _userService.Get(x => x.Id == id);
         }
         [Authorize]
         [HttpGet("GetUser")]
@@ -107,6 +107,14 @@ namespace UserLoginApp.API.Controllers
         public IEnumerable<RequestTime> GetUsersRequestCompleteTimeByDate(string date)
         {
             return _requestTimeService.GetUsersRequestCompleteTimeByDate(date);
+        }
+
+        [HttpGet("GetOnlineCount")]
+        [PermissionAttr("Admin")]
+        public OnlineCountResponse GetOnlineCount()
+        {
+            
+            return _userService.GetOnlineCount();
         }
 
 

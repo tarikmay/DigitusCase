@@ -254,5 +254,10 @@ namespace UserLoginApp.Business.Concrete
         {
             return _genericRepositoryMD.GetAllByFilter(x => x.IsConfirm == false).Where(x => (ObjectId.Parse(x.Id).CreationTime).AddDays(+day)<x.ConfirmDate);
         }
+        public OnlineCountResponse GetOnlineCount()
+        {
+            _memoryCache.TryGetValue("GetOnlineCount", out int count);
+            return new OnlineCountResponse { OnlineCount = count };
+        }
     }
 }

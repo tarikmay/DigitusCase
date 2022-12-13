@@ -22,6 +22,7 @@ namespace UserLoginApp.Business.Interfaces
         IEnumerable<User> GetRegisteredUsers();
         IEnumerable<User> GetRegisteredUsersByDay(int day);
         IEnumerable<User> GetNotConfirmedUsersByDay(int day);
+        OnlineCountResponse GetOnlineCount();
 
     }
 }

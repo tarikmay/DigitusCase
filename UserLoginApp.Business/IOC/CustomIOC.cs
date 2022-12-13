@@ -8,6 +8,7 @@ using MongoDB.Driver;
 using System.Text;
 using System.Text.Json;
 using UserLoginApp.Business.Concrete;
+using UserLoginApp.Business.Helper.Hubs;
 using UserLoginApp.Business.Helper.JwtToken;
 using UserLoginApp.Business.Helper.Mailler;
 using UserLoginApp.Business.Helper.Mailler.Model;
@@ -33,8 +34,6 @@ namespace UserLoginApp.Business.IOC
             services.AddScoped<IUserService, UserManager>();
             services.AddScoped<ITokenService, TokenManager>();
             services.AddScoped<IRequestTimeService, RequestTimeManager>();
-
-            
 
             //JWT 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -117,8 +116,8 @@ namespace UserLoginApp.Business.IOC
             //Cache
             services.AddMemoryCache();
 
-            //SignalR
-            services.AddSignalR();
+           
+
 
 
         }
