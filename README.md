@@ -11,7 +11,7 @@ Yeni bir kullanıcı için kaydolma,kayıt onayı,giriş yapma(token alma),unutu
 ```http
   POST /api/User/Register
 ```
-Bu API ucu aşağıdaki parametler ile yeni kullanıcı kaydededer.Fakat giriş yapamaz.
+Bu API ucu aşağıdaki parametreler ile yeni kullanıcı kaydededer.Fakat giriş yapamaz.
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `username` | `string` |  |
@@ -27,7 +27,7 @@ Bu API ucu aşağıdaki parametler ile yeni kullanıcı kaydededer.Fakat giriş 
 ```http
   POST ​/api​/User​/Confirm​/{key}
 ```
-Bu API ucu aşağıdaki parametler ile yeni kaydolan kullanıcının hesabını onaylar.
+Bu API ucu aşağıdaki parametreler ile yeni kaydolan kullanıcının hesabını onaylar.
 Onay kodu mail adresine gelen koddur.
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
@@ -39,7 +39,7 @@ Onay kodu mail adresine gelen koddur.
 ```http
   POST ​/api/User/Login
 ```
-Bu API ucu aşağıdaki parametler ile giriş yapmanızı sağlar.Size istek yetkisi için bir token döner.
+Bu API ucu aşağıdaki parametreler ile giriş yapmanızı sağlar.Size istek yetkisi için bir token döner.
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `username` | `string` |  |
@@ -51,7 +51,7 @@ Bu API ucu aşağıdaki parametler ile giriş yapmanızı sağlar.Size istek yet
 ```http
   POST ​​/api​/User​/ForgotPassword
 ```
-Bu API ucu aşağıdaki parametler ile yeni şifre oluşturabilmeniz için gerekli kodu mail adresinize gönderir.
+Bu API ucu aşağıdaki parametreler ile yeni şifre oluşturabilmeniz için gerekli kodu mail adresinize gönderir.
 **NOT:** Mail adresine gönderilen kodun geçerlilik süresi 60 saniye olarak ayarlanmıştır.
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
@@ -66,7 +66,7 @@ Bu API ucu aşağıdaki parametler ile yeni şifre oluşturabilmeniz için gerek
 ```http
   POST /api/User/NewPassword
 ```
-Bu API ucu aşağıdaki parametler ile yeni şifre oluşturur.
+Bu API ucu aşağıdaki parametreler ile yeni şifre oluşturur.
 
 | Parametre | Tip     | Açıklama                       |
 | :-------- | :------- | :-------------------------------- |
@@ -80,7 +80,7 @@ Bu API ucu aşağıdaki parametler ile yeni şifre oluşturur.
 ```http
   GET /api/User/GetUser
 ```
-Bu API ucu aşağıdaki parametler ile giriş yapan kullanıcının kendi bilgilerini getirir.
+Bu API ucu aşağıdaki parametreler ile giriş yapan kullanıcının kendi bilgilerini getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -94,7 +94,7 @@ Bu API ucu aşağıdaki parametler ile giriş yapan kullanıcının kendi bilgil
 ```http
   GET /api/User/GetUser
 ```
-Bu API ucu aşağıdaki parametler ile kayıtlı tüm kullanıcıları getirir.
+Bu API ucu aşağıdaki parametreler ile kayıtlı tüm kullanıcıları getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -107,7 +107,7 @@ Bu API ucu aşağıdaki parametler ile kayıtlı tüm kullanıcıları getirir.
 ```http
   GET ​/api​/User​/{id}
 ```
-Bu API ucu aşağıdaki parametler ile gönderilen id için kullanıcıyı getirir getirir.
+Bu API ucu aşağıdaki parametreler ile gönderilen id için kullanıcıyı getirir getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -126,7 +126,7 @@ Bu API ucu aşağıdaki parametler ile gönderilen id için kullanıcıyı getir
 ```http
   GET ​/api​/User​/OnlineUser
 ```
-Bu API ucu aşağıdaki parametler ile çevrimiçi olan kullanıcıları getirir.
+Bu API ucu aşağıdaki parametreler ile çevrimiçi olan kullanıcıları getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -138,7 +138,7 @@ Bu API ucu aşağıdaki parametler ile çevrimiçi olan kullanıcıları getirir
 ```http
   GET ​/api/User/RegisteredUsers
 ```
-Bu API ucu aşağıdaki parametler ile kaydı onaylayan tüm kullanıcıları getirir.
+Bu API ucu aşağıdaki parametreler ile kaydı onaylayan tüm kullanıcıları getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -151,7 +151,7 @@ Bu API ucu aşağıdaki parametler ile kaydı onaylayan tüm kullanıcıları ge
 ```http
   GET ​​/api​/User​/RegisteredUsersByDay
 ```
-Bu API ucu aşağıdaki parametler ile son x gün içinde kaydı onaylayan tüm kullanıcıları getirir.
+Bu API ucu aşağıdaki parametreler ile son x gün içinde kaydı onaylayan tüm kullanıcıları getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -169,7 +169,7 @@ Bu API ucu aşağıdaki parametler ile son x gün içinde kaydı onaylayan tüm 
 ```http
   GET ​​​/api​/User​/GetNotConfirmedUsersByDay
 ```
-Bu API ucu aşağıdaki parametler ile kayıt olduktan sonra x gün içinde kaydı tamamlamayan tüm kullanıcıları getirir.
+Bu API ucu aşağıdaki parametreler ile kayıt olduktan sonra x gün içinde kaydı tamamlamayan tüm kullanıcıları getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -186,7 +186,7 @@ Bu API ucu aşağıdaki parametler ile kayıt olduktan sonra x gün içinde kayd
 ```http
   GET ​​​/api/User/GetUsersRequestCompleteTimeByDate
 ```
-Bu API ucu aşağıdaki parametler ile gg.mm.yyyy tarihinde atılan tüm istekleri ve isteklerin dönüş sürelerini ms cinsinden  getirir.
+Bu API ucu aşağıdaki parametreler ile gg.mm.yyyy tarihinde atılan tüm istekleri ve isteklerin dönüş sürelerini ms cinsinden  getirir.
 
 #### HEADER
 | Parametre | Tip     | Açıklama                       |
@@ -199,6 +199,21 @@ Bu API ucu aşağıdaki parametler ile gg.mm.yyyy tarihinde atılan tüm istekle
 | `date` | `string` |Tarih formatı: ***gg.mm.yyyy*** şeklinde olmalıdır.|
 
 
+#### Online Client Sayısını Getir - Admin
+
+```http
+  GET ​​​/api/User/GetOnlineCount
+```
+Bu API ucu aşağıdaki parametreler ile online CLIENT sayısını verir.
+
+**NOT:** Client bağlantısı gereklidir.
+
+#### HEADER
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `Authorization` | `string` |Login işleminden dönen token (Bearer akjsbkajbhfkhabfahb...) |
+
+
 ## Kullanılan Teknoloji ve Kütüphaneler
 **Framework:** NET Core 6.0 ile ASPNET Web Api
 
@@ -209,6 +224,8 @@ Bu API ucu aşağıdaki parametler ile gg.mm.yyyy tarihinde atılan tüm istekle
 **Mapper:** AutoMapper 
 
 **Auth:** JWTBearer
+
+**WebSocket:** SignalR
 
 
 ## NOT
